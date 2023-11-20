@@ -1,11 +1,15 @@
-
+import Logo from "./Logo";
+import Title from "./Title";
 
 
 const Header = () => {
     return (
-        <Header>
-            <h1> ENCABEZADO </h1>
-        </Header>
+        <header>
+            <Logo /> 
+            {/* <Title text="Task Manager"/> */}
+            <Title small="App" />
+            {/* <Title text="Admin Works"/> */}
+        </header>
     )
 }
 
