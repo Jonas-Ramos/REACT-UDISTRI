@@ -1,14 +1,13 @@
 import './App.css'
+import Header from './components/Header';
 
 function App() {
-  const nombre = "Jony";
-  const edad = 12
-  
   return (
-  <>
-    <h1>Hola {nombre} </h1>
-    <p>{edad > 18 ? "Adulto": "Menor de edad"}</p>
-  </>)
+    <>
+      <Header />
+    </>
+  );
 }
 
 export default App
+ 
