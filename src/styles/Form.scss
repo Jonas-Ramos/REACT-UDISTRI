@@ -1,0 +1,18 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    gap: 5px;
+    background-color: aqua;
+
+    &__label{
+        color: rgb(25, 0, 255);
+    }
+    &__input{
+        color: blueviolet;
+        background-color: rgb(221, 221, 221);
+    }
+    &__button {
+        background-color: orange;
+    }
+}
