@@ -1,17 +1,31 @@
 import PropTypes from "prop-types";
 
 const Title = ( { text, small }) => {
+  // Agregando el estilo al al objeto h3
+const subHeadingStyles = {
+  color : "green",
+  textDecoration: "underline",
+  margin: 10,
+}
+
+text.length > 4 ? subHeadingStyles.color = "green" : subHeadingStyles.backgroundColor = "salmon"
+
+
   return (
     <>
-        <h1>{text}</h1>
-        <h3>{small}</h3>
+        <h1 style={{color: "yellow", backgroundColor: "black"}}>{text}</h1>
+        <h3 style={subHeadingStyles}>{small}</h3>
     </>
   )
 }
 
+
+
+
+
 // Propiedades por defecto
 Title.defaultProps = {
-    text: "Admin de Tareas",
+    text: "Adm",
     small: "App",
 }
 
