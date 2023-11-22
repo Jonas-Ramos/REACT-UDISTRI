@@ -11,7 +11,7 @@ const Title = ( { text, small }) => {
 }
 // Propiedades por defecto
 Title.defaultProps = {
-    text: "Adm",
+    text: "Task Manager",
     small: "App",
 }
 
