@@ -4,9 +4,11 @@
     margin: 10px;
     gap: 5px;
     background-color: aqua;
+    width: 50%;
 
     &__label{
-        color: rgb(25, 0, 255);
+        color: rgb(76, 0, 255);
+        text-align: center;
     }
     &__input{
         color: blueviolet;

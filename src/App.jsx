@@ -8,8 +8,8 @@ function App() {
   return (
     <div className='app'>
       <Header />
-      <TaskList />
       <Form />
+      <TaskList />
     </div>
   );
 }
