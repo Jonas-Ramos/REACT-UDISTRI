@@ -1,7 +1,10 @@
+import "../styles/Logo.scss";
+
+
 
 const Logo = () => {
   return (
-    <div className="loogo">Logo</div>
+    <div className="logo">Logo</div>
   )
 }
 
