@@ -13,12 +13,12 @@ const Title = ( { text, small }) => {
 Title.defaultProps = {
     text: "Task Manager",
     small: "App",
-}
-
-// Define tipos de parámetros
-Title.propTypes = {
+  }
+  
+  // Define tipos de parámetros
+  Title.propTypes = {
     text : PropTypes.string,
-    small : PropTypes.string
+    small : PropTypes.string,
 }
 
 export default Title

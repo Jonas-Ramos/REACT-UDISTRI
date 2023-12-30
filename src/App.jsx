@@ -17,11 +17,19 @@ function App() {
       { id: 3, text: "Playing Videogames" },
       { id: 4, text: "Sleeping" },
     ]);
+
+    const onDeleteHandler = (id) => {
+    if(confirm(`Are you sure you want to delete the task ${id}`)){
+        // Elimina el elemento filtrando el arreglo por el id de cada tarea
+        const resultado = tasks.filter((tarea) => tarea.id !== id);
+        setTasks(resultado)
+      }
+    }
   return (
     <div className='app'>
-      <Header />
+      <Header count={tasks.length}/>
       <AddTaskForm />
-      <TaskList tasks={tasks}/>
+      <TaskList tasks={tasks} onDelete={onDeleteHandler}/>
     </div>
   );
 }

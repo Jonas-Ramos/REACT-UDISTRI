@@ -3,16 +3,11 @@ import "../styles/TaskItem.scss";
 import { FaTrashAlt} from "react-icons/fa"
 
 
-const TaskItem = ({ task }) => {
-
-  const onClickHandler = () => {
-    console.log(`${task.text} , ${task.id}` );
-  }
-
+const TaskItem = ({ task, onDelete }) => {
   return (
     <div className='task'>
         <h3>{task.text}</h3>
-        <FaTrashAlt className='delete' onClick={onClickHandler}/>
+        <FaTrashAlt className='delete' onClick={()=> onDelete(task.id)}/>
     </div>
   )
 }
@@ -20,6 +15,7 @@ const TaskItem = ({ task }) => {
 
 TaskItem.propTypes = {
     task: PropTypes.object,
+    onDelete: PropTypes.func,
 }
 
 

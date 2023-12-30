@@ -3,22 +3,22 @@ import TaskItem from './TaskItem';
 import "../styles/TaskList.scss";
 
 
-const TaskList = ({tasks}) => {
+const TaskList = ({ tasks, onDelete}) => {
   return <>
   {tasks.length === 0 ? 
-    <h3> No Hay Tareas</h3> : (
+    <h3 className='no-tasks'> No Hay Tareas</h3> : (
     <div className='tasks'>
       { tasks.map((task) => (
-        <TaskItem key={task.id} task={task}/>
-      ))}
+        <TaskItem key={task.id} task={task} onDelete={onDelete}/>
+        ))}
     </div>
   )}
-  {/* {tasks.length > 0 && <p> Lenght: {tasks.length}</p>} */}
   </>         
 }
 
 TaskList.propTypes = {
   tasks: PropTypes.array,
+  onDelete: PropTypes.func,
 }   
 
 
