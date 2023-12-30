@@ -1,8 +1,8 @@
 import { useState } from "react"; 
 import Header from './components/Header';
 import TaskList from './components/TaskList';
-import Form from './components/Form';
-import "./styles/App.scss"
+import AddTaskForm from './components/AddTaskForm';
+import "./styles/App.scss";
 
 function App() {
   
@@ -20,7 +20,7 @@ function App() {
   return (
     <div className='app'>
       <Header />
-      <Form />
+      <AddTaskForm />
       <TaskList tasks={tasks}/>
     </div>
   );
