@@ -1,3 +1,31 @@
-### Obtiene todas las tareas
-
+### Obtiene todas las tareas: 200 Ok
 GET http://localhost:3000/tasks
+
+
+### Obtiene una tarea: 200 Ok 
+GET http://localhost:3000/tasks/4
+
+
+### No existe tarea: 404 no found
+GET http://localhost:3000/tasks/10
+
+
+### Crear una tarea: 201 Created
+POST http://localhost:3000/tasks
+content-type: application/json
+
+{
+    "text": "Learn backend"
+}
+
+
+### Modificar un dato existente
+PATCH http://localhost:3000/tasks/2
+content-type: application/json
+
+{
+    "text": "Cook a cake"
+}
+
+### Eliminar tarea
+DELETE http://localhost:3000/tasks/7L1p5yy
