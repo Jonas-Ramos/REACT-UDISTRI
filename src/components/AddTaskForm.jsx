@@ -1,9 +1,14 @@
 import "../styles/Form.scss"
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import PropTypes from 'prop-types'
 
 const AddTaskForm = ({ onCreateTask }) => {
   const [ text, setText ] = useState("");
+  const [count, setCount] = useState(0);
+
+  useEffect(()=>{
+    setCount(text.length)
+  }, [text])
 
   const handleSubmit = (e) => {
     // Previene que se envíe información al servidor refrescando la página
@@ -23,6 +28,7 @@ const AddTaskForm = ({ onCreateTask }) => {
   return (
     <form className="form" onSubmit={handleSubmit}>
       <label className="form__label">New Task: </label>
+      <small>Type Characters: {count}</small>
       <input value={text} type="text" className="form__input" 
       onChange={(e) => setText(e.target.value)}/>
       <button className="form__button">Add</button>
