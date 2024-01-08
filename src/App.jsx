@@ -42,15 +42,15 @@ function App() {
         setTasks(resultado)
       }
     }
-    const onCreateHandler = (text) => {
+    const onCreateHandler = async (text) => {
       // Crear un objeto para la nueva tarea
       const newTask = {
-        id: crypto.randomUUID(),
         text,
       }
 
+      const resultado = await axios.post("http://127.0.0.1:3000/tasks", newTask);
       // Crear un nuevo arreglo basado en los elementos del arreglo tasks agregando la nueva tarea al final
-      const newTasks = [ ...tasks, newTask ]
+      const newTasks = [ ...tasks, resultado.data ]
 
       // Modificar el estado
       setTasks(newTasks);
